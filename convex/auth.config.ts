@@ -1,7 +1,7 @@
 export default {
   providers: [
     {
-      domain: process.env.CLERK_ISSUER_URL,
+      domain: "https://enhanced-airedale-51.clerk.accounts.dev",
       applicationID: "convex",
     },
   ],
