@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useQuery, useMutation } from "convex/react";
 import { useUser } from "@clerk/nextjs";
 import { useRouter, usePathname } from "next/navigation";
-import { api } from "../../../convex/_generated/api";
+import { api } from "../../convex/_generated/api";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
@@ -15,7 +15,7 @@ import { formatConversationTime } from "@/lib/formatTime";
 import { Search, MessageSquarePlus, Users } from "lucide-react";
 import { UserButton } from "@clerk/nextjs";
 import { GroupChatModal } from "./GroupChatModal";
-import { Id } from "../../../convex/_generated/dataModel";
+import { Id } from "../../convex/_generated/dataModel";
 
 interface ConversationSidebarProps {
   activeConversationId?: string;
@@ -124,7 +124,7 @@ export function ConversationSidebar({
   });
 
   return (
-    <div className="flex h-full flex-col bg-slate-900 text-white">
+    <div className="flex h-full w-full flex-col bg-slate-900 text-white">
       {/* Header */}
       <div className="flex items-center justify-between px-4 py-3 border-b border-slate-700">
         <h1 className="text-xl font-bold">Tars Chat</h1>

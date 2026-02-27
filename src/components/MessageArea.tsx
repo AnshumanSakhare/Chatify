@@ -3,8 +3,8 @@
 import { useState, useRef, useEffect, useCallback } from "react";
 import { useQuery, useMutation } from "convex/react";
 import { useUser } from "@clerk/nextjs";
-import { api } from "../../../convex/_generated/api";
-import { Id } from "../../../convex/_generated/dataModel";
+import { api } from "../../convex/_generated/api";
+import { Id } from "../../convex/_generated/dataModel";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -203,7 +203,7 @@ export function MessageArea({
   }
 
   return (
-    <div className="flex flex-col h-full bg-slate-800">
+    <div className="flex flex-col h-full w-full flex-1 bg-slate-800">
       {/* Header */}
       <div className="flex items-center gap-3 px-4 py-3 border-b border-slate-700 bg-slate-850 backdrop-blur">
         {showBackButton && (
@@ -253,7 +253,7 @@ export function MessageArea({
       <div className="relative flex-1 overflow-hidden">
         <div ref={scrollAreaRef} className="h-full">
           <ScrollArea className="h-full">
-          <div className="px-4 py-4 space-y-1">
+          <div className="px-4 lg:px-8 xl:px-16 py-4 space-y-1 w-full">
             {messages === undefined ? (
               // Loading skeleton
               <div className="space-y-4">

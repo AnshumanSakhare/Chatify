@@ -3,7 +3,7 @@
 import { useUser } from "@clerk/nextjs";
 import { useMutation } from "convex/react";
 import { useEffect } from "react";
-import { api } from "../../../convex/_generated/api";
+import { api } from "../../convex/_generated/api";
 import { usePresence } from "@/hooks/usePresence";
 
 export function UserSync() {

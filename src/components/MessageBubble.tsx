@@ -2,11 +2,11 @@
 
 import { useState } from "react";
 import { useMutation } from "convex/react";
-import { api } from "../../../convex/_generated/api";
+import { api } from "../../convex/_generated/api";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { formatMessageTime } from "@/lib/formatTime";
 import { Trash2, Smile } from "lucide-react";
-import { Id } from "../../../convex/_generated/dataModel";
+import { Id } from "../../convex/_generated/dataModel";
 
 const REACTION_EMOJIS = ["👍", "❤️", "😂", "😮", "😢"];
 
@@ -103,7 +103,7 @@ export function MessageBubble({
         </div>
       )}
 
-      <div className={`flex flex-col max-w-[70%] ${isOwn ? "items-end" : "items-start"}`}>
+      <div className={`flex flex-col max-w-[75%] md:max-w-lg lg:max-w-xl xl:max-w-2xl ${isOwn ? "items-end" : "items-start"}`}>
         {/* Sender name (group chat only) */}
         {isGroupChat && !isOwn && showAvatar && (
           <span className="text-xs text-slate-400 mb-1 ml-1">{senderName}</span>
