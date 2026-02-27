@@ -22,9 +22,8 @@ export default function ConversationPage({ params }: ConversationPageProps) {
         />
       </div>
 
-      {/* Desktop layout: sidebar + message area side by side */}
-      {/* The sidebar is already in layout.tsx for md+, but we override here to pass activeConversationId */}
-      <div className="hidden md:flex w-full h-full">
+      {/* Desktop layout: fills the entire remaining space next to sidebar */}
+      <div className="hidden md:flex flex-1 min-w-0 min-h-0 h-full w-full">
         {/* We need to render the sidebar with active ID - but it's in layout, so we just render MessageArea */}
         <MessageArea
           conversationId={conversationId as Id<"conversations">}

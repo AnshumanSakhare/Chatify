@@ -16,12 +16,12 @@ export default async function ChatLayout({
       <UserSync />
 
       {/* Sidebar - hidden on mobile, visible on md+ */}
-      <div className="hidden md:flex md:w-72 lg:w-80 shrink-0 border-r border-slate-700">
+      <div className="hidden md:flex md:w-64 lg:w-72 xl:w-80 shrink-0 border-r border-slate-700">
         <ConversationSidebar />
       </div>
 
-      {/* Main content area */}
-      <div className="flex flex-1 flex-col min-w-0">
+      {/* Main content area — fills all remaining space */}
+      <div className="flex flex-1 flex-col min-w-0 min-h-0 h-full overflow-hidden">
         {children}
       </div>
     </div>
